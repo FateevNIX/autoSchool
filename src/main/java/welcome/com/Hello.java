@@ -11,11 +11,9 @@ public class Hello {
 
     public void welcome() {
         System.out.println("Hello, " + userName + "!");
-
     }
 
     public void byeBay() {
         System.out.println("Bye, " + userName + "!");
-
     }
 }
