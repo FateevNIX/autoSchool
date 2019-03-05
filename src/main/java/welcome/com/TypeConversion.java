@@ -5,7 +5,7 @@ public class TypeConversion {
     public void divideNumbers(int q, int w) {
         int digit = q / w;
         int remainder = q % w;
-        System.out.println("Result of the division is: " + digit + ". Remainder of the division is: " + remainder);
+        System.out.println("Result of the division is: " + digit + ". Remainder from the division is: " + remainder);
     }
 
     public void sumOfDigits(int n) {
