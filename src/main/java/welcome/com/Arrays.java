@@ -94,4 +94,5 @@ public class Arrays {
             System.out.println(secondSmallArray[i]);
         }
     }
+
 }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 import welcome.com.*;
 
 public class Main{
-    public static void main(String [] args) throws IOException {
+    public static void main(String [] args) throws IOException, InterruptedException {
    //     System.out.println("Hello world");     //  this part is for module 2.2 primitive types
    //     printHelloName();
 
@@ -58,8 +58,22 @@ public class Main{
       //  condition.smallestOfTwo(); //Ввести с клавиатуры два числа, и вывести на экран минимальное из них.
       //  condition.biggestOfFour(); //Ввести с клавиатуры четыре числа, и вывести максимальное из них.
        // condition.threeNumbersDesc();//Ввести с клавиатуры три числа, и вывести их в порядке убывания.
-        condition.checkNames();// Ввести с клавиатуры два имени, и если имена одинаковые, вывести сообщение «Имена идентичны». Если имена разные, но их длины равны – вывести сообщение – «Длины имен равны».
-       }
+       // condition.checkNames();// Ввести с клавиатуры два имени, и если имена одинаковые, вывести сообщение «Имена идентичны». Если имена разные, но их длины равны – вывести сообщение – «Длины имен равны».
+       // condition.nameAndAge();
+       // condition.guessTheNumber();
+
+       // condition.countdown(); // 8. Вывести на экран числа от 1 до 10, используя цикл while. 9 Вывести на экран числа от 10 до 1, используя цикл while.
+       // condition.stringsRepeating(); // 10 Ввести с клавиатуры строку и число N. Вывести на экран строку N раз, используя цикл while.
+       // condition.squareOfS(); // 11 Вывести на экран квадрат из 10х10 букв S используя цикл while. Буквы в каждой строке не разделять.
+        condition.multiplicationTable(); // 12 Вывести на экран таблицу умножения 10х10 используя цикл while. Числа разделить пробелом.
+
+      //  condition.onlyEven(); // 13 Используя цикл for вывести на экран чётные числа от 1 до 100 включительно. Через пробел либо с новой строки.
+       // condition.squaresOfEight(); // // 14 Ввести с клавиатуры два числа m и n. Используя цикл for вывести на экран прямоугольник размером m на n из восьмёрок.
+       // condition.rightTriangle(); // 15 Используя цикл for вывести на экран прямоугольный треугольник из восьмёрок со сторонами 10 и 10.
+       // condition.twoLinesOfEigths(); // 16 Используя цикл for вывести на экран: - горизонтальную линию из 10 восьмёрок - вертикальную линию из 10 восьмёрок.
+       // condition.nameWhichLovesYou(); // 17 Ввести с клавиатуры имя и, используя цикл for 10 раз, вывести: [*имя* любит меня.]
+       // condition.reverseCountdown(); //Написать программу, которая ведёт обратный отсчёт с 30 до 0, и в конце выводит на экран текст «Бум!». Программа должна уменьшать число 10 раз в секунду.
+            }
 
 
 
