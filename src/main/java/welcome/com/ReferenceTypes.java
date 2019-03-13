@@ -3,7 +3,7 @@ package welcome.com;
 public class ReferenceTypes {
 
 
-    public void firstMiddleAndLastSymbols(String str) {
+    public void firstMiddleAndLastSymbols(String str) { //Дана строка. Вывести первый, последний и средний (если он есть) символы.
         int first = 0;
         int middle = str.length();
         int last = str.length() - 1;
@@ -16,14 +16,14 @@ public class ReferenceTypes {
                     + ". Last char is: " + str.charAt(last));
         }
     }
-    public void sentenceBeforeDotAndNumberOfSpaces(String str) {
+    public void sentenceBeforeDotAndNumberOfSpaces(String str) { //Напишите программу, которая выводит часть строки до первой встреченной точки, включая точку. Также предусмотрите вывод количества пробелов.
         int indexOfFirstDot = str.indexOf(".") + 1;
         String[] numberOfWords = str.split(" ");
         int numberOfSpaces = numberOfWords.length - 1;
         System.out.println("Your first sentence is: " + str.substring(0, indexOfFirstDot));
         System.out.println("Number of spaces in whole string are: " + numberOfSpaces);
     }
-    public void replaceSubstringInString(String fullString, String substringToBeReplaced, String newSubstring) {
+    public void replaceSubstringInString(String fullString, String substringToBeReplaced, String newSubstring) { //Найти в строке указанную подстроку и заменить ее на новую. Строку, ее подстроку для замены и новую подстроку вводит пользователь.
 
         boolean isContain = fullString.contains(substringToBeReplaced);
         if (isContain) {
@@ -33,7 +33,7 @@ public class ReferenceTypes {
             System.out.println("There are no such substring as: " + substringToBeReplaced);
         }
     }
-    public void findLongestWordInSentence(String str){
+    public void findLongestWordInSentence(String str){ //Вводится строка слов, разделенных пробелами. Найти самое длинное слово и вывести его на экран. Случай, когда самых длинных слов может быть несколько, не обрабатывать.
         String[] arrayOfWords = str.split(" ");
         int i;
         int counterOfLongestWords = 0;
@@ -53,10 +53,6 @@ public class ReferenceTypes {
         else{
                 System.out.println("The longest word is: " + longestWord);
             }
-
-
     }
-
-
-    }
+}
 

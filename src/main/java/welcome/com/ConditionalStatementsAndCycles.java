@@ -88,7 +88,7 @@ public class ConditionalStatementsAndCycles {
         }
     }
 
-    public void checkNames() {
+    public void checkNames() { //4 Ввести с клавиатуры два имени, и если имена одинаковые, вывести сообщение «Имена идентичны». Если имена разные, но их длины равны – вывести сообщение – «Длины имен равны».
         Scanner first = new Scanner(System.in);
         System.out.println("Please enter first name: ");
         String firstName = first.nextLine();
@@ -104,7 +104,7 @@ public class ConditionalStatementsAndCycles {
         }
     }
 
-    public void nameAndAge() { //5 Ввести с клавиатуры имя и возраст. Если возраст меньше 18 вывести надпись «Подрасти еще»  6 Ввести с клавиатуры имя и возраст. Если возраст больше 20 вывести надпись «И 18-ти достаточно»
+    public void nameAndAge() { //5 Ввести с клавиатуры имя и возраст. Если возраст меньше 18 вывести надпись «Подрасти еще» И 6 Ввести с клавиатуры имя и возраст. Если возраст больше 20 вывести надпись «И 18-ти достаточно»
         Scanner scan = new Scanner(System.in);
         System.out.println("Please enter your name: ");
         String name = scan.nextLine();
@@ -121,7 +121,7 @@ public class ConditionalStatementsAndCycles {
         }
     }
 
-    public void guessTheNumber() {
+    public void guessTheNumber() {  //7 За семь попыток угадать число. При каждой попытке вам будет выводиться сообщение - "Мало" или "Много". Если угадаете, уложившись в семь попыток, то выводится сообщение "Угадал :)" и программа завершает работу. Если по истечении 7 попыток число не угадывается, то выводится сообщение "Не угадал :(" и завершается работа.
         Random random = new Random();
         int secret;
         secret = random.nextInt(20 + 1);
