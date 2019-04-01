@@ -1,11 +1,13 @@
 import java.io.IOException;
 import java.lang.reflect.Array;
-import java.util.Scanner;
+import java.util.*;
+
 import welcome.com.*;
+import figur.*;
 
 public class Main{
     public static void main(String [] args) throws IOException, InterruptedException {
-        System.out.println("Hello world");     //  Создать простой Java-проект (консольное приложение), которое при запуске выводит в консоль “Hello, world!”.
+        /*System.out.println("Hello world");     //  Создать простой Java-проект (консольное приложение), которое при запуске выводит в консоль “Hello, world!”.
         printHelloName(); //Добавить метод printHelloName(), который будет запрашивать у пользователя ввести имя, считывать введенное имя с консоли и выводить на экран приветствие “Hello, %name%”.
 
 
@@ -81,17 +83,51 @@ public class Main{
         condition.twoLinesOfEigths(); // 16 Используя цикл for вывести на экран: - горизонтальную линию из 10 восьмёрок - вертикальную линию из 10 восьмёрок.
         condition.nameWhichLovesYou(); // 17 Ввести с клавиатуры имя и, используя цикл for 10 раз, вывести: [*имя* любит меня.]
         condition.reverseCountdown(); //Написать программу, которая ведёт обратный отсчёт с 30 до 0, и в конце выводит на экран текст «Бум!». Программа должна уменьшать число 10 раз в секунду.
+            }*/
+
+        List<Figures> list = new ArrayList<>(); //В функции main должны быть рализованы следующие пункты:
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        int i = 0;
+        int n = 0;
+        Random random = new Random();
+        while (i < 10) { //- создания массива рандомных фигур размером в 10 элементов.
+            int randomFigure = random.nextInt(3);
+            if (randomFigure == 0) {
+                Circle circle = new Circle();
+                circle.setName("Круг" + a);
+                circle.findSquare();
+                list.add(circle);
+                a++;
+            } else if (randomFigure == 1) {
+                Triangle triangle = new Triangle();
+                triangle.setName("Треугольник" + b);
+                triangle.findSquare();
+                list.add(triangle);
+                b++;
+            } else {
+                Square square = new Square();
+                square.setName("Квадрат" + c);
+                square.findSquare();
+                list.add(square);
+                c++;
+            }
+            i++;
+        }
+        list.sort(Comparator.comparing(Figures::getSquare)); //- сортировка фигур по площади (ASC/DESC - не важно)
+            for (; n < 10; n++) {
+                System.out.println(list.get(n).getName() + " S = "  + list.get(n).getSquare() ); //- вывести отсортированный массив на консоли в виде : Имя, S=площадь
             }
 
+    }
+        public static void printHelloName() {//Добавить метод printHelloName(), который будет запрашивать у пользователя ввести имя, считывать введенное имя с консоли и выводить на экран приветствие “Hello, %name%”.
+                Scanner scan = new Scanner(System.in);
+                System.out.println("Please enter your name: ");
+                String s = scan.next();
+                System.out.println("Hello, " + s);
 
 
+            }
 
-    public static void printHelloName(){ //Добавить метод printHelloName(), который будет запрашивать у пользователя ввести имя, считывать введенное имя с консоли и выводить на экран приветствие “Hello, %name%”.
-        Scanner scan = new Scanner(System.in);
-            System.out.println("Please enter your name: ");
-        String s = scan.next();
-            System.out.println("Hello, " + s);
-
-
-}
-}
+        }
