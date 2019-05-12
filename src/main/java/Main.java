@@ -2,10 +2,14 @@ import java.io.IOException;
 import java.lang.reflect.Array;
 import java.util.*;
 
+import generics.com.ArrayListCollections;
+import generics.com.HashSetCollections;
+import generics.com.SetAndMapCollections;
 import welcome.com.*;
 import figur.*;
 
 public class Main{
+    private static LogicClass logic;
     public static void main(String [] args) throws IOException, InterruptedException {
         /*System.out.println("Hello world");     //  Создать простой Java-проект (консольное приложение), которое при запуске выводит в консоль “Hello, world!”.
         printHelloName(); //Добавить метод printHelloName(), который будет запрашивать у пользователя ввести имя, считывать введенное имя с консоли и выводить на экран приветствие “Hello, %name%”.
@@ -85,7 +89,7 @@ public class Main{
         condition.reverseCountdown(); //Написать программу, которая ведёт обратный отсчёт с 30 до 0, и в конце выводит на экран текст «Бум!». Программа должна уменьшать число 10 раз в секунду.
             }*/
 
-        List<Figures> list = new ArrayList<>(); //В функции main должны быть рализованы следующие пункты:
+        /*List<Figures> list = new ArrayList<>(); //В функции main должны быть рализованы следующие пункты:
         int a = 0;
         int b = 0;
         int c = 0;
@@ -118,9 +122,56 @@ public class Main{
         list.sort(Comparator.comparing(Figures::getSquare)); //- сортировка фигур по площади (ASC/DESC - не важно)
             for (; n < 10; n++) {
                 System.out.println(list.get(n).getName() + " S = "  + list.get(n).getSquare() ); //- вывести отсортированный массив на консоли в виде : Имя, S=площадь
-            }
+            }*/
 
+            /*logic = new LogicClass();  // задание с логированием
+            logic.doLogic();
+
+        ExceptionTestOne someTest1 = new ExceptionTestOne();
+        someTest1.countdown();*/
+
+        /*HashSetCollections set = new HashSetCollections();
+        set.hashSetWithPlants(); //1. HashSet из растений
+        set.hashMapTenPairs();     //2. HashMap из 10 пар
+        set.hashMapCats();        //3. Коллекция HashMap из котов
+        set.hashMapObject(); //6. Коллекция HashMap из Object
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("арбуз", "ягода");
+        map.put("банан", "трава");
+        map.put("вишня", "ягода");
+        map.put("груша", "фрукт");
+        map.put("дыня", "овощ");
+        map.put("ежевика", "куст");
+        map.put("жень-шень", "корень");
+        map.put("земляника", "ягода");
+        map.put("ирис", "цветок");
+        map.put("картофель", "клубень");
+        for (Map.Entry<String, String> pair : map.entrySet()) { //4. Вывести содержимое коллекции на экран, каждый элемент с новой строки.
+            String key = pair.getKey();
+            System.out.println(key);
+        }
+        for (Map.Entry<String, String> pair : map.entrySet()) { //5. Вывести содержимое коллекции на экран, каждый элемент с новой строки.
+            String value = pair.getValue();
+            System.out.println(value);
+        }*/
+
+        /*ArrayListCollections list = new ArrayListCollections();
+        list.fiveStringsInArray(); //7. 5 различных строчек в списке
+        list.longestStringInArray(); //8. Самая длинная строка
+        list.shortestStringInArray(); //9. Самая короткая строка
+        list.addStringInToBeginingOfList(); //10. 10 строчек в начало списка
+        list.removeLastStringAndAddItToBegining();//11. Удали последнюю строку и вставь её в начало*/
+
+        SetAndMapCollections set = new SetAndMapCollections();
+        /*set.twentyWordsStartsWithL(); //12. Создать множество строк (Set<String>), занести в него 20 слов на букву «Л».
+        set.setWithTwentyNumbers();//13. Создать множество чисел(Set<Integer>), занести туда 20 различных чисел. Удалить из множества все числа больше 10.
+        set.mapWithNames();//14. Создать словарь (Map<String, String>) занести в него десять записей по принципу «Фамилия» - «Имя». Проверить сколько людей имеют совпадающие с заданным имя или фамилию.
+        set.birthdaysOfPeople();*/
+        set.removeEqualNames();
     }
+
+
+
         public static void printHelloName() {//Добавить метод printHelloName(), который будет запрашивать у пользователя ввести имя, считывать введенное имя с консоли и выводить на экран приветствие “Hello, %name%”.
                 Scanner scan = new Scanner(System.in);
                 System.out.println("Please enter your name: ");

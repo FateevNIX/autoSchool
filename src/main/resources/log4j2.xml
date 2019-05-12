@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="ERROR">
+    <Properties>
+    <Property name="logPath">D:\\Logs</Property>
+</Properties>
+    <appenders>
+        <RollingFile name="MyRollingFile" fileName="D:/Logs/log_file.log"
+                     filePattern="logs/$${date:yyyy-MM-dd}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <pattern>%d %p %C{1.} [%t] %m%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="1 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5p %c{1}:%L - %m%n"/>
+        </Console>
+    </appenders>
+    <loggers>
+        <logger name="welcome.com.LogicClass" level="TRACE" additivity="false">
+            <appender-ref ref="MyRollingFile"/>
+        </logger>
+        <root level="ERROR">
+            <appender-ref ref="Console"/>
+        </root>
+    </loggers>
+</configuration>
