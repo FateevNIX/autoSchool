@@ -125,12 +125,14 @@ public class Main{
             }*/
 
             /*logic = new LogicClass();  // задание с логированием
-            logic.doLogic();
+            logic.doLogic();*/
 
         ExceptionTestOne someTest1 = new ExceptionTestOne();
-        someTest1.countdown();*/
+        ExceptionTestTwo someTest2 = new ExceptionTestTwo();
+        someTest1.countdown();
+        someTest2.countdown();
 
-        /*HashSetCollections set = new HashSetCollections();
+        HashSetCollections set = new HashSetCollections();
         set.hashSetWithPlants(); //1. HashSet из растений
         set.hashMapTenPairs();     //2. HashMap из 10 пар
         set.hashMapCats();        //3. Коллекция HashMap из котов
@@ -146,28 +148,28 @@ public class Main{
         map.put("земляника", "ягода");
         map.put("ирис", "цветок");
         map.put("картофель", "клубень");
-        for (Map.Entry<String, String> pair : map.entrySet()) { //4. Вывести содержимое коллекции на экран, каждый элемент с новой строки.
+        for (Map.Entry<String, String> pair : map.entrySet()) { //4. Вывести на экран список ключей, каждый элемент с новой строки.
             String key = pair.getKey();
             System.out.println(key);
         }
-        for (Map.Entry<String, String> pair : map.entrySet()) { //5. Вывести содержимое коллекции на экран, каждый элемент с новой строки.
+        for (Map.Entry<String, String> pair : map.entrySet()) { //5. Вывести на экран список значений, каждый элемент с новой строки.
             String value = pair.getValue();
             System.out.println(value);
-        }*/
+        }
 
-        /*ArrayListCollections list = new ArrayListCollections();
+        ArrayListCollections list = new ArrayListCollections();
         list.fiveStringsInArray(); //7. 5 различных строчек в списке
         list.longestStringInArray(); //8. Самая длинная строка
         list.shortestStringInArray(); //9. Самая короткая строка
         list.addStringInToBeginingOfList(); //10. 10 строчек в начало списка
-        list.removeLastStringAndAddItToBegining();//11. Удали последнюю строку и вставь её в начало*/
+        list.removeLastStringAndAddItToBegining();//11. Удали последнюю строку и вставь её в начало
 
-        SetAndMapCollections set = new SetAndMapCollections();
-        /*set.twentyWordsStartsWithL(); //12. Создать множество строк (Set<String>), занести в него 20 слов на букву «Л».
-        set.setWithTwentyNumbers();//13. Создать множество чисел(Set<Integer>), занести туда 20 различных чисел. Удалить из множества все числа больше 10.
-        set.mapWithNames();//14. Создать словарь (Map<String, String>) занести в него десять записей по принципу «Фамилия» - «Имя». Проверить сколько людей имеют совпадающие с заданным имя или фамилию.
-        set.birthdaysOfPeople();*/
-        set.removeEqualNames();
+        SetAndMapCollections mapSet = new SetAndMapCollections();
+        mapSet.twentyWordsStartsWithL(); //12. Создать множество строк (Set<String>), занести в него 20 слов на букву «Л».
+        mapSet.setWithTwentyNumbers();//13. Создать множество чисел(Set<Integer>), занести туда 20 различных чисел. Удалить из множества все числа больше 10.
+        mapSet.mapWithNames();//14.17 Создать словарь (Map<String, String>) занести в него десять записей по принципу «Фамилия» - «Имя». Проверить сколько людей имеют совпадающие с заданным имя или фамилию.
+        mapSet.birthdaysOfPeople();//15. Создать словарь (Map<String, LocalDate>) и занести в него десять записей по принципу: «фамилия» - «дата рождения». Удалить из словаря всех людей, родившихся летом.
+        mapSet.removeEqualNames(); //16. Создать словарь (Map<String, String>) занести в него десять записей по принципу «фамилия» - «имя». Удалить людей, имеющих одинаковые имена.
     }
 
 

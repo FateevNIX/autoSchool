@@ -55,7 +55,7 @@ public class SetAndMapCollections {
         System.out.println("Людей с именем Петр в списке: " + count);
     }
 
-    public void birthdaysOfPeople() {
+    public void birthdaysOfPeople() { //15. Создать словарь (Map<String, LocalDate>) и занести в него десять записей по принципу: «фамилия» - «дата рождения». Удалить из словаря всех людей, родившихся летом.
         Map<String, LocalDate> map = new HashMap<String, LocalDate>();
         map.put("Петров", LocalDate.of(1990, 6, 5));
         map.put("Иванов", LocalDate.of(1991, 2, 3));
@@ -85,7 +85,7 @@ public class SetAndMapCollections {
 
     }
 
-    public void removeEqualNames() {
+    public void removeEqualNames() { //16. Создать словарь (Map<String, String>) занести в него десять записей по принципу «фамилия» - «имя». Удалить людей, имеющих одинаковые имена.
         Map<String, String> map = new HashMap<String, String>();
         map.put("Сукачев", "Петр");
         map.put("Иванов", "Иван");
@@ -110,12 +110,10 @@ public class SetAndMapCollections {
                     count++;
                 }
             }
-
             if (count >= 2) { //если имя повторяется, записываем в массив ключ
-                String name2 = pair.getKey();
-                namesToRemove[i] = name2;
+                String lastName = pair.getKey();
+                namesToRemove[i] = lastName;
                 i++;
-
             }
         }
         i = 0;
